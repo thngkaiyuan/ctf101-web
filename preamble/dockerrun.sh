@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -d -p 3000:80 ctf101:${PWD##*/}
+docker run -d -t -p 3000:80 ctf101:${PWD##*/}
