@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "[+] Synchonizing repo..."
-git pull
-echo "[+] Done synchronizing repo."
-
 CHALLENGES=`ls -l --time-style="long-iso" . | egrep '^d' | awk '{print $8}'`
 for CHALLENGE in $CHALLENGES; do
 	cd $CHALLENGE
