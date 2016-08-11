@@ -10,4 +10,5 @@ for CHALLENGE in $CHALLENGES; do
 	echo "[+] Running challenge $CHALLENGE"
 	./dockerrun.sh
 	echo "[+] Done running challenge $CHALLENGE"
+	cd ..
 done
