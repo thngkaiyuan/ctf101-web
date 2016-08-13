@@ -1,0 +1,2 @@
+Q: What answer am I expecting?
+A: flag{00ps_I_n3ver_th0ught_some1_wud_c_th15!}
