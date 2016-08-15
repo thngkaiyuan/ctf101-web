@@ -2,24 +2,12 @@
    include("config.php");
    session_start();
    
-   if(isset($_POST['nickname']) && $_POST['nickname']) {
-      $nickname = $_POST['nickname'];
-      $sql = "SELECT username, nickname FROM users WHERE nickname LIKE '%$nickname%'";
-   } else {
-      $sql = "SELECT username, nickname FROM users";
-   }
+   if(isset($_POST['username'])) {
+      $username = $_POST['username'];
+      $sql = "SELECT id FROM users WHERE username = '$username'";
       $result = mysqli_query($db,$sql);
       $count = mysqli_num_rows($result);
-      if($count == 0) {
-	$display = "Nobody with nickname containing '$nickname' found.";
-      } else {
-
-        $display = '<table class="table table-hover"><thead><th>Username</th><th>Nickname</th></thead><tbody>';
-        while ($row = mysqli_fetch_array($result,MYSQLI_NUM)) {
-		$display .= "<tr><td>$row[0]</td><td>$row[1]</td></tr>";
-	}
-	$display .= '</tbody></table>';
-      }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -61,24 +49,29 @@
   </div><!-- /.container-fluid -->
 </nav>
     <div class="jumbotron">
-        <h1>Search for a user</h1>
+<?php if(isset($_POST['username']) && $count == 0): ?>
+<div class="alert alert-danger">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Error!</strong> No such user exists.
+</div>
+<?php elseif(isset($_POST['username']) && $count > 0): ?>
+<div class="alert alert-success">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Success!</strong> Instructions to reset your password has been sent to your email.
+</div>
+<?php endif; ?>
+        <h1>Forgot your password?</h1>
         <div class="row">
             <div class="col-md-6">
                 <form action="" method="post">
                     <div class="form-group">
-                        <input type="username" class="form-control" name="nickname" id="username" placeholder="Nickname">
+                        <input type="username" class="form-control" name="username" id="username" placeholder="username">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg">Search</button>
+                    <button type="submit" class="btn btn-primary btn-lg">Send password reset email</button>
                 </form>
             </div>
         </div>
     </div>
-    <div class="jumbotron">
-        <h1>Results</h1>
-        <div class="row">
-            <div class="col-md-6">
-<?php echo $display; ?>
-</div></div></div>
 </div>
   </body>
 </html>

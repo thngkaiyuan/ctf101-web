@@ -60,7 +60,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="search.php"><span class="glyphicon glyphicon-search"></span> Search users</a></li>
+      <li><a href="forgot_password.php"><span class="glyphicon glyphicon-envelope"></span> Forgot Your Password?</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
