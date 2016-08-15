@@ -1,0 +1,1 @@
+Drats. My friends found out that I obtained unauthorised access to the chat page and upgraded the security of the page. The new page now resides at http://54.255.178.173:3009. Can you help me to stealthily gain access to the system again? Hint: The schema is unchanged from the previous challenge.
