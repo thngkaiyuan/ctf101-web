@@ -25,4 +25,12 @@ It is not the intention of this workshop to train malicious hackers. We teach of
 - Business Logic Vulnerability
 - Insecure Direct Object Reference
 - SQL Injection
+  - Similar Vulnerability: Command Injection
 - Blind SQL Injection
+
+# Not Covered
+
+- Cross-Site Scripting
+- Cross-Site Request Forgeries
+- Unvalidated Redirects and Forwards
+- etc.
