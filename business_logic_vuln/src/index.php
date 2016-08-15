@@ -49,7 +49,7 @@
 if(isset($_POST['fields'])) {
 	$codes = array_filter($_POST['fields']);
 	if(count($codes) >= 5) {
-		echo 'flag{}';
+		echo 'flag{w3_cre4t3_0uR_Own_1uck}';
 	} else {
 		echo '<strong>You need to submit five or more valid coupons in order to win this lucky draw.</strong><p><br>' . $msg;
 	}
