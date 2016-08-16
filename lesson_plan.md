@@ -13,6 +13,7 @@ It is not the intention of this workshop to train malicious hackers. We teach of
 - Agenda
 - Introduction to NUS Greyhats
 - Introduction to CTFs
+- Setting up shell access
 - Basics
   - Modifying HTML elements
   - Modifying Cookies
