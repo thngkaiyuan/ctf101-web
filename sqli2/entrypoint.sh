@@ -9,13 +9,13 @@ CREATE USER 'sqli'@'localhost' IDENTIFIED BY 'cmon lah, you can guess this?';
 GRANT SELECT, INSERT, CREATE ON sqli.* TO 'sqli'@'localhost';
 CREATE DATABASE sqli;
 USE sqli;
-CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT, username varchar(30) NOT NULL, password varchar(64) NOT NULL, nickname varchar(255) NOT NULL, PRIMARY KEY (id));
-INSERT INTO users VALUES (null, 'admin', md5('computer'), 'superuser');
-INSERT INTO users VALUES (null, 'xinan', md5('hfw98aH99a*d&fynd88Svn983j(#j*syugh'), 'the guy');
-INSERT INTO users VALUES (null, 'wenyan', md5('hfw98aH99a*d&fynd88Svn983j(#j*syugh'), 'the girl');
-INSERT INTO users VALUES (null, 'potato', md5('hfw98aH99a*d&fynd88Svn983j(#j*syugh'), 'the food');
-INSERT INTO users VALUES (null, 'sadhi', md5('hfw98aH99a*d&fynd88Svn983j(#j*syugh'), 'the friend');
-INSERT INTO users VALUES (null, 'john', md5('hfw98aH99a*d&fynd88Svn983j(#j*syugh'), 'the stranger');
+CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT, username varchar(30) NOT NULL, password INT NOT NULL, PRIMARY KEY (id));
+INSERT INTO users VALUES (null, 'admin', 7824);
+INSERT INTO users VALUES (null, 'xinan', 3298);
+INSERT INTO users VALUES (null, 'wenyan', 3298);
+INSERT INTO users VALUES (null, 'potato', 3298);
+INSERT INTO users VALUES (null, 'sadhi', 3298);
+INSERT INTO users VALUES (null, 'john', 3298);
 """
 
 tail -f /dev/null

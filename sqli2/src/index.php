@@ -8,7 +8,7 @@
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
 
-      $sql = "SELECT id FROM users WHERE username = '$myusername' and password = MD5('$mypassword')";
+      $sql = "SELECT id FROM users WHERE username = '$myusername' and password = $mypassword";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['id'];
@@ -60,7 +60,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="forgot_password.php"><span class="glyphicon glyphicon-envelope"></span> Forgot Your Password?</a></li>
+      <li><a href="forgot_password.php"><span class="glyphicon glyphicon-envelope"></span> Forgot Your Favourite Number?</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -68,7 +68,7 @@
     <div class="jumbotron">
         <h1>Sign in to your account</h1>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-3">
 <?php if($error): ?>
 <div class="alert alert-danger">
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -82,7 +82,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Password*</label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Your Favourite Number (0-9999)" maxlength="4">
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg">Sign to your account</button>
                 </form>

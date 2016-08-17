@@ -62,17 +62,17 @@
 <?php elseif(isset($_POST['username']) && $count > 0): ?>
 <div class="alert alert-success">
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  <strong>Success!</strong> Instructions to reset your password has been sent to your email.
+  <strong>Success!</strong> It's disappointing that you would forget your favourite number but we sent it to your email anyway.
 </div>
 <?php endif; ?>
-        <h1>Forgot your password?</h1>
+        <h1>Forgot your favourite number?</h1>
         <div class="row">
             <div class="col-md-6">
                 <form action="" method="post">
                     <div class="form-group">
                         <input type="username" class="form-control" name="username" id="username" placeholder="username">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg">Send password reset email</button>
+                    <button type="submit" class="btn btn-primary btn-lg">Send the number to your email</button>
                 </form>
             </div>
         </div>
