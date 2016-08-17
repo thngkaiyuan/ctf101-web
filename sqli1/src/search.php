@@ -4,6 +4,11 @@
    
    if(isset($_POST['username']) && $_POST['username']) {
       $username = $_POST['username'];
+
+      // Filtering
+      $username = $str_ireplace('sleep', '', $username);
+      $username = $str_ireplace('benchmark', '', $username);
+
       $sql = "SELECT username, nickname FROM users WHERE username = '$username'";
    } else {
       $sql = "SELECT username, nickname FROM users";
