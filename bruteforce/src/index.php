@@ -75,7 +75,7 @@ text-align:center;
 if(isset($_POST['num'])) {
 	print("<font color='red'>");
 	$pin = $_POST['num'];
-	if($pin == '748') print("flag{why_c0uld_7h3_fb1_n07_bru73f0rc3_7h3_1ph0n3?}");
+	if($pin == '042') print("flag{why_c0uld_7h3_fb1_n07_bru73f0rc3_7h3_1ph0n3?}");
 	else print("Wrong pin!");
 	print("</font>");
 } else {
