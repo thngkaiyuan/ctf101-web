@@ -6,8 +6,8 @@
       $username = $_POST['username'];
 
       // Filtering
-      $username = $str_ireplace('sleep', '', $username);
-      $username = $str_ireplace('benchmark', '', $username);
+      $username = str_ireplace('sleep', '', $username);
+      $username = str_ireplace('benchmark', '', $username);
 
       $sql = "SELECT username, nickname FROM users WHERE username = '$username'";
    } else {
