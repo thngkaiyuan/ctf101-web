@@ -2,7 +2,7 @@
 session_start();
 $FLAG_LIM = 10;
 $NUM_TO_REMOVE = 5;
-$SELF_NUMBER = $FLAG_LIM - 1 + $NUM_TO_REMOVE;
+$SELF_NUMBER = $FLAG_LIM + $NUM_TO_REMOVE;
 $CHOICES = ['nothing1','nothing2','flag'];
 if(!isset($_SESSION['ballots'])) {
 	$_SESSION['balloted'] = false;
